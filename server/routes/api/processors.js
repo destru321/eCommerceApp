@@ -30,7 +30,9 @@ router.post('/', async (req, res) => {
         processorClocking: req.body.clocking,
         processorSeries: req.body.series,
         processorCache: req.body.cache,
-        processorSocket: req.body.socket
+        processorSocket: req.body.socket,
+        processorPic: req.body.pic,
+        processorAmount: req.body.amount
     })
     res.status(201).send();
 })
@@ -89,6 +91,10 @@ let processorsSeriesArray = [
     {
         endpoint: 'amdRyzen3',
         series: 'AMD Ryzen 3'
+    },
+    {
+        endpoint: 'amdAthlon',
+        series: "AMD Athlon"
     }
 ]
 
